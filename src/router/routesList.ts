@@ -5,7 +5,7 @@ import {BiMessageDetail} from "react-icons/bi"
 
 const routesList: IRoute[] = [
   {
-    path: '/home',
+    path: '/',
     element: Homepage,
     icon: AiOutlineHome
   },

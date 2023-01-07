@@ -4,12 +4,9 @@ import { userLoggedIn } from '../../../store/atoms/userInfos';
 
 const Homepage: React.FC = () => {
 
-  const [loggedIn, setIsLoggedIn] = useAtom(userLoggedIn);
-
   return (
-    <div>
-      <p>Homepage</p>
-      <button onClick={() => setIsLoggedIn(!loggedIn)}>Login</button>
+    <div className='bg-transparent'>
+      <p className='bg-transparent'>Bienvue</p>
     </div>
   );
 };
