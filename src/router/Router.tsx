@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import routesList from './routesList';
 import { useAtom } from 'jotai';
 import { userLoggedIn, userInfos } from '../store/atoms/userInfos';
@@ -12,7 +12,7 @@ const Router: React.FC = () => {
 
   return (
     <BrowserRouter>
-    { loggedIn ?
+    {loggedIn ?
       <>
         <Routes>
           {routesList.map((route) => (
@@ -22,8 +22,7 @@ const Router: React.FC = () => {
         <Navbar />
       </>
       : <Login />
-    }
-      
+    }      
     </BrowserRouter>
   );
 };
