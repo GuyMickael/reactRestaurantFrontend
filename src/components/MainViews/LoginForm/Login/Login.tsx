@@ -6,8 +6,8 @@ const Login: React.FC = () => {
   const [email, setEmail] = React.useState("");
 
   return (
-<div className="container mx-auto h-full flex flex-1 justify-center items-center">
-    <div className="w-full max-w-lg">
+    <div className="container mx-auto h-full flex flex-1 justify-center items-center">
+     <div className="w-full max-w-lg">
       <div className="leading-loose">
         <form className="max-w-sm m-4 p-10 bg-gray-700 bg-opacity-75 rounded shadow-xl">
             <p className="text-white text-center text-lg font-bold">Connexion</p>
@@ -20,13 +20,11 @@ const Login: React.FC = () => {
                   href="#">Pas encore inscrit ?</a>
               </div>
               <div className="text-center">
-                <a className="inline-block right-0 align-baseline font-light text-sm text-500 hover:text-red-400">
+                <p className="inline-block right-0 align-baseline font-light text-sm text-500 hover:text-red-400">
                     Créer un compte
-                </a>
+                </p>
               </div>
-
         </form>
-
       </div>
     </div>
   </div>

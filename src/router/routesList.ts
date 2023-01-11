@@ -1,14 +1,22 @@
 import Homepage from "../components/MainViews/Homepage/Homepage";
+import Reservation from "../components/MainViews/Reservation/Reservation";
+import ReservationClickAndCollect from "../components/MainViews/ReserveationClickAndCollect/ReservationClickAndCollect";
 import IRoute from "../types/routes.type";
-import { AiOutlineHome, AiOutlineUsergroupAdd, AiOutlineUser, AiFillPlusCircle } from "react-icons/ai";
-import {BiMessageDetail} from "react-icons/bi"
+
 
 const routesList: IRoute[] = [
   {
     path: '/',
     element: Homepage,
-    icon: AiOutlineHome
   },
+  {
+    path: '/Reservation',
+    element: Reservation,
+  },
+  {
+    path: '/ClickAndCollect',
+    element: ReservationClickAndCollect,
+  }
 ]
 
 export default routesList;

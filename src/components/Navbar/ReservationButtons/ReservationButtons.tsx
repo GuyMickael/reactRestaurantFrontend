@@ -1,12 +1,16 @@
 import React from 'react';
 import { GiKnifeFork, GiShoppingBag } from 'react-icons/gi';
+import { useNavigate } from 'react-router-dom';
 
 const ReservationButtons: React.FC = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div id="Reservations" className='container flex flex-row'>
-      <div>
+      <div onClick={() => navigate('/Reservation')}>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <div className='border-t-0 border-r-0 border-l-0 border-b-2 border-b-transparent 
+          <div className=' cursor-pointer border-t-0 border-r-0 border-l-0 border-b-2 border-b-transparent 
                             transition duration-500 hover:border-b-2 hover:border-b-gray-500'
             >
             <span className="text-sm">Sur place</span>
@@ -18,9 +22,9 @@ const ReservationButtons: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className='md:ml-10 sm:ml-10'>
+      <div className='md:ml-10 sm:ml-10' onClick={() => navigate('/ClickAndCollect')}>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <div className='border-t-0 border-r-0 border-l-0 border-b-2 border-b-transparent 
+          <div className='cursor-pointer border-t-0 border-r-0 border-l-0 border-b-2 border-b-transparent 
                           transition duration-500 hover:border-b-2 hover:border-b-gray-500'
           >
             <span className="text-sm">A emporter</span>

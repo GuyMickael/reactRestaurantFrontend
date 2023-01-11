@@ -7,10 +7,6 @@ import { userLoggedIn, userInfos } from '../store/atoms/userInfos';
 import Login from '../components/MainViews/LoginForm/Login/Login';
 
 const Router: React.FC = () => {
-
-  const [loggedIn] = useAtom(userLoggedIn);
-
-  console.log(location);
   
   return (
     <BrowserRouter>
