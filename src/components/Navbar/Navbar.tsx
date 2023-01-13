@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-white py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 h-16">
+    <nav className="bg-blue-200 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 h-16">
       <div className="w-screen flex flex-wrap items-center justify-between mx-auto px-10">
         <div onClick={() => navigate('/')}>
           <Logo />

@@ -10,12 +10,14 @@ const Router: React.FC = () => {
   
   return (
     <BrowserRouter>
+      <Navbar />  
+      <div id="routerDiv" className='h-screen pt-16 bg-slate-100 dark:bg-gray-700'>
         <Routes>
           {routesList.map((route) => (
             <Route path={route.path} element={<route.element />} key={`key_${route.path}`}/>
           ))}
         </Routes>
-        <Navbar />  
+      </div>
     </BrowserRouter>
   );
 };

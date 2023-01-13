@@ -9,9 +9,7 @@ function App() {
   // si on veut une image
   // className="h-screen w-screen bg-no-repeat bg-cover" style={{ backgroundImage: `url(${imagePath})` }}
   return (
-    <div className='' >
-      <Router />
-    </div>
+    <Router />
   )
 }
 

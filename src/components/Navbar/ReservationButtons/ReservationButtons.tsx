@@ -3,9 +3,7 @@ import { GiKnifeFork, GiShoppingBag } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
 
 const ReservationButtons: React.FC = () => {
-
   const navigate = useNavigate();
-
   return (
     <div id="Reservations" className='container flex flex-row'>
       <div onClick={() => navigate('/Reservation')}>
