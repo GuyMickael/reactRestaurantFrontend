@@ -1,23 +1,33 @@
 import React from 'react';
-import IDishes from '../../../types/dishes.type';
+import IDishes from '../../../../types/dishes.type';
 import { BsInfoCircle } from 'react-icons/bs';
-import { Button, IconButton, Tooltip } from '@mui/material';
+import { IconButton, Tooltip } from '@mui/material';
+import MoreInfoPopup from '../MoreInfoPopup/MoreinfoPopup';
+import {CiWheat} from 'react-icons/ci'
 
 interface Props {
   dish: IDishes;
 }
 
 const ArticleClickAndCollect: React.FC<Props> = ({dish}) => {
+  
+  const [isOpened, setIsOpened] = React.useState(false);
+
+  const closePopup = () => {
+    setIsOpened(false);
+  }
+
   return (
     <div className='relative max-sm:w-full flex dark:bg-slate-600 border-2 border-gray-500 dark:border-slate-300 rounded-md'>
+      <MoreInfoPopup dish={dish} isOpened={isOpened} close={closePopup}/>
       <div className='w-1/3'>
-       
+      <img src={dish.image} alt={dish.name} className='w-full h-full p-0.5 object-cover rounded-md' />
       </div>
       <div className="relative w-2/3  h-40">
-        <p className='absolute left-4 font-bold'>
+        <p className='absolute left-4 top-1 font-bold'>
           {dish.name}
         </p>
-        <p className='absolute right-4 top-1 font-extralight text-green-600'>
+        <p className='absolute right-5 top-1 font-extralight text-green-600'>
           {dish.isVegetarian && 
           <>
             <span className="sr-only">Veggie Product</span>
@@ -25,11 +35,19 @@ const ArticleClickAndCollect: React.FC<Props> = ({dish}) => {
           </>
           }
         </p>
-        <p className='absolute right-4 top-1 font-extralight text-green-600'>
+        <p className='absolute right-5 top-1 font-extralight text-green-600'>
           {dish.isVegan && 
           <>
             <span className="sr-only">Vegan Product</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0H24V24H0z"/><path d="M21 3v2c0 9.627-5.373 14-12 14H7.098c.212-3.012 1.15-4.835 3.598-7.001 1.204-1.065 1.102-1.68.509-1.327-4.084 2.43-6.112 5.714-6.202 10.958L5 22H3c0-1.363.116-2.6.346-3.732C3.116 16.974 3 15.218 3 13 3 7.477 7.477 3 13 3c2 0 4 1 8 0z" fill="rgba(33,198,105,1)"/></svg>
+          </>
+          }
+        </p>
+        <p className='absolute right-0 top-0.5 text-amber-300'>
+          {dish.isVegan && 
+          <>
+            <span className="sr-only">Gluten Free Product</span>
+            <CiWheat size={28} />
           </>
           }
         </p>
@@ -41,7 +59,7 @@ const ArticleClickAndCollect: React.FC<Props> = ({dish}) => {
         </p>
         <div className='absolute left-1 bottom-1'>
           <Tooltip placement="top" title="Plus d'informations">
-            <IconButton className='p-0'>
+            <IconButton className='p-0' onClick={() => setIsOpened(true)}>
               <BsInfoCircle className='dark:text-slate-50 hover:text-blue-800 dark:hover:text-grey-900 transition ease-linear' />
             </IconButton>
           </Tooltip>
