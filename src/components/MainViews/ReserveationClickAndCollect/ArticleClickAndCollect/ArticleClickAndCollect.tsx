@@ -44,7 +44,7 @@ const ArticleClickAndCollect: React.FC<Props> = ({dish}) => {
           }
         </p>
         <p className='absolute right-0 top-0.5 text-amber-300'>
-          {dish.isVegan && 
+          {dish.isGlutenFree && 
           <>
             <span className="sr-only">Gluten Free Product</span>
             <CiWheat size={28} />

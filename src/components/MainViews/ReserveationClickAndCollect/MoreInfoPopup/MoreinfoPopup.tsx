@@ -13,6 +13,7 @@ interface Props {
 }
 
 const MoreInfoPopup: React.FC<Props> = ({dish, isOpened, close}) => {
+  console.log(dish)
   return (
     <Dialog open={isOpened} onClose={close} fullWidth>
       <div id="Popup" className='w-full h-96'>

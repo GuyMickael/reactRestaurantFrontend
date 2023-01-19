@@ -94,7 +94,7 @@ const dishes: IDishes[] = [
         isAvailable: true,
         isVegan: true,
         isVegetarian: true,
-        isGlutenFree: false,
+        isGlutenFree: true,
         isSpicy: false
     },
 ];
